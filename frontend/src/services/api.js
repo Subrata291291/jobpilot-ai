@@ -19,14 +19,8 @@ export const recommendJobsFromCV = async ({
   const formData = new FormData();
 
   formData.append("file", file);
-  formData.append(
-    "preferred_role",
-    preferredRole
-  );
-  formData.append(
-    "preferred_location",
-    preferredLocation
-  );
+  formData.append("preferred_role", preferredRole);
+  formData.append("preferred_location", preferredLocation);
 
   const response = await api.post(
     "/jobs/recommend-from-cv",
